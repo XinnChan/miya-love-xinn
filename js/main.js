@@ -15,10 +15,15 @@ window.onload = () => {
         index++;
         setTimeout(appendTitle, 300);
       } else {
-        // Setelah tulisan "I LOVE U" selesai, tambahkan tulisan tambahan
+        // Setelah tulisan "I LOVE U" selesai, tambahkan tulisan "Miya Ku Tercinta"
         const subtitleElement = document.createElement('div');
-        subtitleElement.innerHTML = 'Miya Ku Tercinta <span class="emoji">😘</span>';
+        subtitleElement.innerHTML = 'Miya Ku Tercinta';
         titleElement.appendChild(subtitleElement);
+        
+        // Tambahkan emoji setelah tulisan "Miya Ku Tercinta"
+        const emojiElement = document.createElement('div');
+        emojiElement.innerHTML = '😘';
+        titleElement.appendChild(emojiElement);
       }
     }
 
