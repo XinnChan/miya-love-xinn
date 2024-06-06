@@ -1,11 +1,11 @@
-
-onload = () => {
-  const audio = new Audio("mimi.mp3") 
-  audio.play() 
-  const c = setTimeout(() => {
+window.onload = () => {
+  const audio = new Audio("mimi.mp3");
+  audio.play();
+  
+  setTimeout(() => {
     document.body.classList.remove("not-loaded");
 
-    const titles = ('I LOVE U\nMiya Ku Tercinta😘').split('')
+    const titles = 'I LOVE U'.split('');
     const titleElement = document.getElementById('title');
     let index = 0;
 
@@ -13,12 +13,15 @@ onload = () => {
       if (index < titles.length) {
         titleElement.innerHTML += titles[index];
         index++;
-        setTimeout(appendTitle, 300); // 1000ms delay
+        setTimeout(appendTitle, 300);
+      } else {
+        // Setelah tulisan "I LOVE U" selesai, tambahkan tulisan tambahan
+        const subtitleElement = document.createElement('div');
+        subtitleElement.innerHTML = 'Miya Ku Tercinta 😘';
+        titleElement.appendChild(subtitleElement);
       }
     }
 
     appendTitle();
-
-    clearTimeout(c);
   }, 1000);
 };
