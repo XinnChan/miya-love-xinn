@@ -17,7 +17,7 @@ window.onload = () => {
       } else {
         // Setelah tulisan "I LOVE U" selesai, tambahkan tulisan tambahan
         const subtitleElement = document.createElement('div');
-        subtitleElement.innerHTML = 'Miya Ku Tercinta 😘';
+        subtitleElement.innerHTML = 'Miya Ku Tercinta <span class="emoji">😘</span>';
         titleElement.appendChild(subtitleElement);
       }
     }
